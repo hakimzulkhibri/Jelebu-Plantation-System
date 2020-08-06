@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:background="#2196F3"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/DrawerHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#00BCD4"
+        android:fontFamily="@font/alegreya_sans_sc_bold"
+        android:text="Drawer  Header"
+        android:textSize="30sp"
+        tools:layout_editor_absoluteX="28dp"
+        tools:layout_editor_absoluteY="16dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
