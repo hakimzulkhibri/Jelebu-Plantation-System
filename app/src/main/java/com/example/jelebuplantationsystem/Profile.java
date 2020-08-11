@@ -45,12 +45,12 @@ public class Profile extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
-        phone = findViewById(R.id.profilePhone);
-        email = findViewById(R.id.profileEmail);
-        fullName = findViewById(R.id.profileName);
-        Nextbutton = findViewById(R.id.Nextbtn);
+        phone = findViewById(R.id.profilePhoneNo);
+        email = findViewById(R.id.profileEmailAddress);
+        fullName = findViewById(R.id.profileFullName);
+        Nextbutton = findViewById(R.id.saveProfileInfo);
 
-        profileImage = findViewById(R.id.profileImage);
+        profileImage = findViewById(R.id.profileImageView);
         changeProfileImage = findViewById(R.id.changeProfile);
 
         fAuth = FirebaseAuth.getInstance();
@@ -86,8 +86,14 @@ public class Profile extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //open gallery
-                Intent openGalleryIntent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-                startActivityForResult(openGalleryIntent, 1000);
+                Intent i = new Intent(v.getContext(),EditProfile.class);
+                i.putExtra("fullName",fullName.getText().toString());
+                i.putExtra("email", email.getText().toString());
+                i.putExtra("phone", phone.getText().toString());
+
+                startActivity(i);
+                //Intent openGalleryIntent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+                //startActivityForResult(openGalleryIntent, 1000);
 
             }
         });
