@@ -25,7 +25,7 @@ import com.google.firebase.auth.FirebaseAuth;
 public class Login extends AppCompatActivity {
     EditText mEmail, mPassword;
     Button mLoginBtn;
-    TextView mCreateBtn, forgotTextLink;
+    TextView forgotTextLink, mCreateBtn;
     FirebaseAuth fAuth;
     ProgressBar progressBar;
 
@@ -41,6 +41,13 @@ public class Login extends AppCompatActivity {
         mLoginBtn = findViewById(R.id.registerBtn);
         mCreateBtn = findViewById(R.id.createText);
         forgotTextLink = findViewById(R.id.forgotPassword);
+
+        mCreateBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), Register.class));
+            }
+        });
 
         mLoginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -64,26 +71,45 @@ public class Login extends AppCompatActivity {
 
                 // authenticate the user
 
-                fAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if(task.isSuccessful()){
-                            Toast.makeText(Login.this,"Logged In Successfully",Toast.LENGTH_SHORT).show();
-                            startActivity(new Intent(getApplicationContext(),MainActivity.class));
-                        }else{
-                            Toast.makeText(Login.this,"Error !" + task.getException().getMessage(),Toast.LENGTH_SHORT).show();
-                            progressBar.setVisibility(View.GONE);
+                if (email.equals("syaznees@gmail.com") && password.equals("123456")){
+
+                    fAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                        @Override
+                        public void onComplete(@NonNull Task<AuthResult> task) {
+                            if(task.isSuccessful()){
+                                Toast.makeText(Login.this,"Logged In Successfully",Toast.LENGTH_SHORT).show();
+                                startActivity(new Intent(getApplicationContext(),AdminHome.class));
+                            }else{
+                                Toast.makeText(Login.this,"Error !" + task.getException().getMessage(),Toast.LENGTH_SHORT).show();
+                                progressBar.setVisibility(View.GONE);
+                            }
                         }
-                    }
-                });
+                    });
+
+                }else {
+
+                    fAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                        @Override
+                        public void onComplete(@NonNull Task<AuthResult> task) {
+                            if (task.isSuccessful()) {
+                                Toast.makeText(Login.this, "Logged In Successfully", Toast.LENGTH_SHORT).show();
+                                startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                            } else {
+                                Toast.makeText(Login.this, "Error !" + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                                progressBar.setVisibility(View.GONE);
+                            }
+                        }
+                    });
+                }
+
+
+
+
             }
         });
-        mCreateBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(),Register.class));
-            }
-        });
+
+
+
         forgotTextLink.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
