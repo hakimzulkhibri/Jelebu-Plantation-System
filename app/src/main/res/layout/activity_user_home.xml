@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".UserHome"
     android:orientation="vertical"
-    android:padding="10dp"
+    android:padding="30dp"
     android:background="@color/backgroundcolor">
 
     <androidx.appcompat.widget.LinearLayoutCompat
@@ -15,54 +15,6 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        <androidx.cardview.widget.CardView
-            android:layout_width="160dp"
-            android:layout_height="190dp"
-            android:layout_margin="1dp">
-
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="#FFFFFF"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:layout_width="64dp"
-                    android:layout_height="64dp"
-                    android:background="@drawable/cerclebackgroundpurple"
-                    android:padding="10dp"
-                    android:src="@drawable/thermometer" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:fontFamily="@font/alegreya_sans"
-                    android:text="Temperature Check"
-                    android:textSize="12sp"
-                    android:textStyle="bold" />
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="@color/lightgray"
-                    android:layout_margin="10dp"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="Check Your Plant Temperature Here"
-                    android:padding="5dp"
-                    android:textColor="@android:color/darker_gray"/>
-
-
-
-
-
-
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
             android:layout_width="160dp"
             android:layout_height="190dp"
@@ -79,7 +31,53 @@
                 <ImageView
                     android:layout_width="64dp"
                     android:layout_height="64dp"
-                    android:background="@drawable/cerclebackgroundpurple"
+                    android:background="@color/green"
+                    android:padding="10dp"
+                    android:src="@drawable/thermometer" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/alegreya_sans"
+                    android:text="Temperature Check"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_margin="10dp"
+                    android:background="@color/lightgray" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="Check Your Plant Temperature Here"
+                    android:textColor="@android:color/darker_gray" />
+
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="160dp"
+            android:layout_height="190dp"
+            android:layout_margin="20dp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:background="@color/green"
                     android:padding="10dp"
                     android:src="@drawable/report" />
 
@@ -130,7 +128,7 @@
                 <ImageView
                     android:layout_width="64dp"
                     android:layout_height="64dp"
-                    android:background="@drawable/cerclebackgroundpurple"
+                    android:background="@color/green"
                     android:padding="10dp"
                     android:src="@drawable/clock" />
 
@@ -142,18 +140,20 @@
                     android:text="Timestamp"
                     android:textSize="12sp"
                     android:textStyle="bold" />
+
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:background="@color/lightgray"
-                    android:layout_margin="10dp"/>
+                    android:layout_margin="10dp"
+                    android:background="@color/lightgray" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="Check Your Time Stamp Here"
                     android:padding="5dp"
-                    android:textColor="@android:color/darker_gray"/>
+                    android:text="Check Your Time Stamp Here"
+                    android:textColor="@android:color/darker_gray" />
 
             </LinearLayout>
         </androidx.cardview.widget.CardView>
@@ -173,7 +173,7 @@
                 <ImageView
                     android:layout_width="64dp"
                     android:layout_height="64dp"
-                    android:background="@drawable/cerclebackgroundpurple"
+                    android:background="@color/green"
                     android:padding="10dp"
                     android:src="@drawable/humidity" />
 

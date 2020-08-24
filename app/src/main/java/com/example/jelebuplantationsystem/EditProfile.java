@@ -32,7 +32,7 @@ import java.util.Map;
 public class EditProfile extends AppCompatActivity {
 
     public static final String TAG = "TAG";
-    EditText profileFullName,profileEmail,profilePhone;
+    EditText profileFullName,profilePhone;
     ImageView profileImageView;
     Button saveBtn;
     FirebaseAuth fAuth;
@@ -47,7 +47,6 @@ public class EditProfile extends AppCompatActivity {
 
         Intent data = getIntent();
         final String fullName = data.getStringExtra("fullName");
-        String email = data.getStringExtra("email");
         String phone = data.getStringExtra("phone");
 
         fAuth = FirebaseAuth.getInstance();
@@ -56,7 +55,6 @@ public class EditProfile extends AppCompatActivity {
         storageReference = FirebaseStorage.getInstance().getReference();
 
         profileFullName = findViewById(R.id.profileFullName);
-        profileEmail = findViewById(R.id.profileEmailAddress);
         profilePhone = findViewById(R.id.profilePhoneNo);
         profileImageView = findViewById(R.id.profileImageView);
         saveBtn = findViewById(R.id.saveProfileInfo);
@@ -80,19 +78,18 @@ public class EditProfile extends AppCompatActivity {
         saveBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(profileFullName.getText().toString().isEmpty() || profileEmail.getText().toString().isEmpty() || profilePhone.getText().toString().isEmpty()){
+                if(profileFullName.getText().toString().isEmpty() || profilePhone.getText().toString().isEmpty()){
                     Toast.makeText(EditProfile.this, "One or Many fields are empty.", Toast.LENGTH_SHORT).show();
                     return;
                 }
 
-                final String email = profileEmail.getText().toString();
-                user.updateEmail(email).addOnSuccessListener(new OnSuccessListener<Void>() {
+                final String name = profileFullName.getText().toString();
+                user.updateEmail(name).addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
                     public void onSuccess(Void aVoid) {
                         DocumentReference docRef = fStore.collection("users").document(user.getUid());
                         Map<String,Object> edited = new HashMap<>();
-                        edited.put("email",email);
-                        edited.put("fName",profileFullName.getText().toString());
+                        edited.put("fName",profileFullName);
                         edited.put("phone",profilePhone.getText().toString());
                         docRef.update(edited).addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override
@@ -102,7 +99,7 @@ public class EditProfile extends AppCompatActivity {
                                 finish();
                             }
                         });
-                        Toast.makeText(EditProfile.this, "Email is changed.", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(EditProfile.this, "Profile updated", Toast.LENGTH_SHORT).show();
                     }
                 }).addOnFailureListener(new OnFailureListener() {
                     @Override
@@ -114,12 +111,10 @@ public class EditProfile extends AppCompatActivity {
 
             }
         });
-
-        profileEmail.setText(email);
         profileFullName.setText(fullName);
         profilePhone.setText(phone);
 
-        Log.d(TAG, "onCreate: " + fullName + " " + email + " " + phone);
+        Log.d(TAG, "onCreate: " + fullName + " " + phone);
     }
 
 

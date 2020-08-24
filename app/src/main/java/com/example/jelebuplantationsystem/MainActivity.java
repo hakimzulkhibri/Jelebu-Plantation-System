@@ -60,7 +60,6 @@ public class MainActivity extends AppCompatActivity {
         phone = findViewById(R.id.profilePhone);
         fullName = findViewById(R.id.profileName);
         email    = findViewById(R.id.profileEmail);
-        resetPassLocal = findViewById(R.id.resetPasswordLocal);
 
 
         profileImage = findViewById(R.id.profileImage);
