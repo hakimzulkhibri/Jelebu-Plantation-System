@@ -71,7 +71,7 @@ public class Login extends AppCompatActivity {
 
                 // authenticate the user
 
-                if (email.equals("syaznees@gmail.com") && password.equals("123456")){
+                if (email.equals("hakimtimun24@gmail.com") && password.equals("123456")){
 
                     fAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                         @Override

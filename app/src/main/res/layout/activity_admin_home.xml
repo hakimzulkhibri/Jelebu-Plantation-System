@@ -231,14 +231,15 @@
             android:layout_width="159dp"
             android:layout_height="45dp"
             android:fontFamily="@font/alegreya_sans_sc_bold"
-            android:text="My  Profile"
+            android:text="ADMIN BODOH"
             android:textColor="#000000"
             android:textSize="30sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.515"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.094" />
+            app:layout_constraintVertical_bias="0.042" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

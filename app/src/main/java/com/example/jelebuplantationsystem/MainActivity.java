@@ -126,7 +126,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-        resetPassLocal.setOnClickListener(new View.OnClickListener() {
+        /*resetPassLocal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -166,7 +166,7 @@ public class MainActivity extends AppCompatActivity {
                 passwordResetDialog.create().show();
 
             }
-        });
+        });*/
 
         changeProfileImage.setOnClickListener(new View.OnClickListener() {
             @Override
