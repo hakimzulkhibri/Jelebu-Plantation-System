@@ -4,11 +4,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class TemperatureCheck extends AppCompatActivity {
+public class AdminProfile extends AppCompatActivity {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_temperature_check);
+        setContentView(R.layout.activity_admin_profile);
+
     }
 }

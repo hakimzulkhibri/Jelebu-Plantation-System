@@ -11,8 +11,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".UserHome"></activity>
+        <activity android:name=".adminsetting"></activity>
+        <activity android:name=".usermanagement" />
         <activity android:name=".AdminHome" />
+        <activity android:name=".Timestamp" />
+        <activity android:name=".TemperatureCheck" />
+        <activity android:name=".SoilHumidity" />
+        <activity android:name=".DataReport" />
+        <activity android:name=".UserHome" />
+        <activity android:name=".AdminProfile" />
         <activity android:name=".EditProfile" />
         <activity android:name=".Register">
             <intent-filter>

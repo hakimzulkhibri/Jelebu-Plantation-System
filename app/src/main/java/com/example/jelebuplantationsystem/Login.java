@@ -78,7 +78,7 @@ public class Login extends AppCompatActivity {
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if(task.isSuccessful()){
                                 Toast.makeText(Login.this,"Logged In Successfully",Toast.LENGTH_SHORT).show();
-                                startActivity(new Intent(getApplicationContext(),AdminHome.class));
+                                startActivity(new Intent(getApplicationContext(), AdminHome.class));
                             }else{
                                 Toast.makeText(Login.this,"Error !" + task.getException().getMessage(),Toast.LENGTH_SHORT).show();
                                 progressBar.setVisibility(View.GONE);
@@ -93,7 +93,7 @@ public class Login extends AppCompatActivity {
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()) {
                                 Toast.makeText(Login.this, "Logged In Successfully", Toast.LENGTH_SHORT).show();
-                                startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                                startActivity(new Intent(getApplicationContext(), UserHome.class));
                             } else {
                                 Toast.makeText(Login.this, "Error !" + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                                 progressBar.setVisibility(View.GONE);
