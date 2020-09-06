@@ -16,6 +16,11 @@ public class AdminHome extends AppCompatActivity implements View.OnClickListener
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_home);
 
+
+
+
+
+
         AdminProfile = (CardView) findViewById(R.id.adminprofile);
         Users = (CardView) findViewById(R.id.user);
         Settings = (CardView) findViewById(R.id.setting);
@@ -35,6 +40,7 @@ public class AdminHome extends AppCompatActivity implements View.OnClickListener
             case R.id.adminprofile:
                 i = new Intent(this, AdminProfile.class);
                 startActivity(i);
+
                 break;
             case R.id.user:
                 i = new Intent(this, usermanagement.class);
