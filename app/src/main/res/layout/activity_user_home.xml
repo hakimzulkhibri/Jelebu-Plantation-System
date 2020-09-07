@@ -4,10 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/login"
     tools:context=".UserHome"
     android:orientation="vertical"
     android:padding="30dp"
-    android:background="@drawable/backgroundd">
+   >
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:clipToPadding="false"
@@ -18,8 +19,8 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/myprofile"
-            android:layout_width="160dp"
-            android:layout_height="190dp"
+            android:layout_width="120dp"
+            android:layout_height="150dp"
             android:layout_margin="10dp">
 
             <LinearLayout
@@ -51,21 +52,13 @@
                     android:layout_margin="10dp"
                     android:background="@color/lightgray" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:padding="5dp"
-                    android:text="Edit or check your profile here "
-                    android:textColor="@android:color/darker_gray" />
-
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
             android:id="@+id/datareport"
-            android:layout_width="160dp"
-            android:layout_height="190dp"
+            android:layout_width="120dp"
+            android:layout_height="150dp"
             android:layout_margin="10dp">
 
 
@@ -96,13 +89,6 @@
                     android:layout_height="1dp"
                     android:background="@color/lightgray"
                     android:layout_margin="10dp"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="Your data history of your plant is here"
-                    android:padding="5dp"
-                    android:textColor="@android:color/darker_gray"/>
 
             </LinearLayout>
         </androidx.cardview.widget.CardView>
@@ -119,8 +105,8 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/temperature"
-            android:layout_width="160dp"
-            android:layout_height="190dp"
+            android:layout_width="120dp"
+            android:layout_height="150dp"
             android:layout_margin="10dp">
 
             <LinearLayout
@@ -152,21 +138,13 @@
                     android:layout_margin="10dp"
                     android:background="@color/lightgray" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:padding="5dp"
-                    android:text="Check you plant temperature here"
-                    android:textColor="@android:color/darker_gray" />
-
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
             android:id="@+id/soilhumidity"
-            android:layout_width="160dp"
-            android:layout_height="190dp"
+            android:layout_width="120dp"
+            android:layout_height="150dp"
             android:layout_margin="10dp">
 
 
@@ -197,13 +175,7 @@
                     android:layout_height="1dp"
                     android:background="@color/lightgray"
                     android:layout_margin="10dp"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="Check Your Soil Humidity Here"
-                    android:padding="5dp"
-                    android:textColor="@android:color/darker_gray"/>
+
 
             </LinearLayout>
         </androidx.cardview.widget.CardView>
@@ -219,8 +191,8 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/timestamp"
-            android:layout_width="160dp"
-            android:layout_height="190dp"
+            android:layout_width="120dp"
+            android:layout_height="150dp"
             android:layout_margin="10dp">
 
             <LinearLayout
@@ -252,21 +224,14 @@
                     android:layout_margin="10dp"
                     android:background="@color/lightgray" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:padding="5dp"
-                    android:text="Check your timestamp of your plant here"
-                    android:textColor="@android:color/darker_gray" />
 
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
             android:id="@+id/logout"
-            android:layout_width="160dp"
-            android:layout_height="190dp"
+            android:layout_width="120dp"
+            android:layout_height="150dp"
             android:layout_margin="10dp">
 
 
@@ -297,13 +262,6 @@
                     android:layout_height="1dp"
                     android:background="@color/lightgray"
                     android:layout_margin="10dp"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="I am taking you out from this app"
-                    android:padding="5dp"
-                    android:textColor="@android:color/darker_gray"/>
 
             </LinearLayout>
         </androidx.cardview.widget.CardView>

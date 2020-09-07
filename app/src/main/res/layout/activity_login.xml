@@ -5,15 +5,17 @@
 
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/login"
-    tools:context=".Login">
+    android:background="@drawable/register"
+    tools:context=".Login"
+    >
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/alegreya_sans_sc_bold"
-        android:text="LOGIN  YOUR ACCOUNT"
+        android:text="Login  Your  Account"
+        android:textColor="#090808"
         android:textSize="25sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -26,6 +28,7 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/alegreya_sans_medium"
         android:text="For  Jelebu  Plantation  System"
         android:textSize="13sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -87,7 +90,9 @@
         android:layout_marginLeft="32dp"
         android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
+        android:fontFamily="@font/alegreya_sans_sc_bold"
         android:text="LOGIN"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -95,41 +100,47 @@
         app:layout_constraintTop_toBottomOf="@+id/password"
         app:layout_constraintVertical_bias="0.11" />
 
-    <TextView
-        android:id="@+id/createText"
-        android:layout_width="wrap_content"
+    <Button
+        android:id="@+id/createaccount"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/alegreya_sans_medium"
-        android:text="New Here ? Create New Account"
-        android:textColor="#000000"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:fontFamily="@font/alegreya_sans_sc_bold"
+        android:text="Create  New  Account"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/registerBtn"
-        app:layout_constraintVertical_bias="0.06999999" />
+        app:layout_constraintTop_toBottomOf="@+id/password"
+        app:layout_constraintVertical_bias="0.287" />
 
     <ProgressBar
         android:id="@+id/progressBar2"
         style="?android:attr/progressBarStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="88dp"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/createText"
-        app:layout_constraintVertical_bias="0.16000003" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/forgotPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/alegreya_sans_sc_bold"
         android:text="Forgot Password ?"
         android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/createText"
-        app:layout_constraintVertical_bias="0.04000002" />
+        app:layout_constraintTop_toBottomOf="@+id/createaccount"
+        app:layout_constraintVertical_bias="0.037" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

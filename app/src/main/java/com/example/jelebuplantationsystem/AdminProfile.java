@@ -47,8 +47,7 @@ public class AdminProfile extends AppCompatActivity {
     FirebaseFirestore fStore;
     String userId;
     Button resendCode;
-    Button resetPassLocal,changeProfileImage;
-    FirebaseUser user;
+    Button resetPassLocal,changeProfileImage, Adminhome ;
     ImageView profileImage;
     StorageReference storageReference;
 
@@ -64,11 +63,32 @@ public class AdminProfile extends AppCompatActivity {
 
         profileImage = findViewById(R.id.profileImage);
         changeProfileImage = findViewById(R.id.changeProfile);
+        Adminhome = findViewById(R.id.adminhome);
 
 
         fAuth = FirebaseAuth.getInstance();
         fStore = FirebaseFirestore.getInstance();
         storageReference = FirebaseStorage.getInstance().getReference();
+
+        Adminhome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent i = new Intent(v.getContext(), AdminHome.class);
+                startActivity(i);
+            }
+        });
+
+
+
+        Adminhome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent i = new Intent(v.getContext(), AdminHome.class);
+                startActivity(i);
+            }
+        });
 
         StorageReference profileRef = storageReference.child("users/"+fAuth.getCurrentUser().getUid()+"/profile.jpg");
         profileRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {

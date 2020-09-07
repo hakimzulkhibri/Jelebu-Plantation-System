@@ -2,24 +2,17 @@ package com.example.jelebuplantationsystem;
 
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.Activity;
-import android.content.ContentResolver;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.provider.MediaStore;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.webkit.MimeTypeMap;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -35,7 +28,6 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
-import com.google.firebase.storage.UploadTask;
 import com.squareup.picasso.Picasso;
 
 import javax.annotation.Nullable;
@@ -47,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
     FirebaseFirestore fStore;
     String userId;
     Button resendCode;
-    Button resetPassLocal,changeProfileImage;
+    Button Homepage,changeProfileImage;
     FirebaseUser user;
     ImageView profileImage;
     StorageReference storageReference;
@@ -64,6 +56,16 @@ public class MainActivity extends AppCompatActivity {
 
         profileImage = findViewById(R.id.profileImage);
         changeProfileImage = findViewById(R.id.changeProfile);
+        Homepage = findViewById(R.id.adminhome);
+
+        Homepage.setOnClickListener(new View.OnClickListener() {
+                                        @Override
+                                        public void onClick(View v) {
+
+                                            Intent i = new Intent(v.getContext(), UserHome.class);
+                                            startActivity(i);
+                                        }
+                                    });
 
 
         fAuth = FirebaseAuth.getInstance();
@@ -126,48 +128,6 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-        /*resetPassLocal.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                final EditText resetPassword = new EditText(v.getContext());
-
-                final AlertDialog.Builder passwordResetDialog = new AlertDialog.Builder(v.getContext());
-                passwordResetDialog.setTitle("Reset Password ?");
-                passwordResetDialog.setMessage("Enter New Password > 6 Characters long.");
-                passwordResetDialog.setView(resetPassword);
-
-                passwordResetDialog.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        // extract the email and send reset link
-                        String newPassword = resetPassword.getText().toString();
-                        user.updatePassword(newPassword).addOnSuccessListener(new OnSuccessListener<Void>() {
-                            @Override
-                            public void onSuccess(Void aVoid) {
-                                Toast.makeText(MainActivity.this, "Password Reset Successfully.", Toast.LENGTH_SHORT).show();
-                            }
-                        }).addOnFailureListener(new OnFailureListener() {
-                            @Override
-                            public void onFailure(@NonNull Exception e) {
-                                Toast.makeText(MainActivity.this, "Password Reset Failed.", Toast.LENGTH_SHORT).show();
-                            }
-                        });
-                    }
-                });
-
-                passwordResetDialog.setNegativeButton("No", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        // close
-                    }
-                });
-
-                passwordResetDialog.create().show();
-
-            }
-        });*/
-
         changeProfileImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -207,8 +167,8 @@ public class MainActivity extends AppCompatActivity {
         startActivity(new Intent(getApplicationContext(),Login.class));
         finish();
     }
-}
 
+}
 
 
 

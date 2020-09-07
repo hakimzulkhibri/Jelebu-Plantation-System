@@ -14,6 +14,7 @@
         android:layout_marginTop="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/Email"
+        app:layout_constraintHorizontal_bias="0.75"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView6"
         app:layout_constraintVertical_bias="0.0"
@@ -21,15 +22,13 @@
 
     <ImageView
         android:id="@+id/imageView7"
-        android:layout_width="26dp"
-        android:layout_height="27dp"
-        android:layout_marginBottom="352dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/phone"
-        app:layout_constraintHorizontal_bias="0.333"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView10"
-        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintVertical_bias="0.04"
         app:srcCompat="@drawable/ic_local_phone_black_24dp"
         tools:ignore="VectorDrawableCompat" />
 
@@ -44,7 +43,7 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.3"
+        app:layout_constraintVertical_bias="0.308"
         app:srcCompat="@drawable/ic_person_black_24dp" />
 
     <TextView
@@ -205,15 +204,15 @@
 
     <ImageView
         android:id="@+id/imageView10"
-        android:layout_width="28dp"
-        android:layout_height="29dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="30dp"
+        android:layout_height="33dp"
+        android:layout_marginBottom="288dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/password"
-        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintHorizontal_bias="0.25"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView9"
-        app:layout_constraintVertical_bias="0.00999999"
+        app:layout_constraintVertical_bias="0.254"
         app:srcCompat="@drawable/ic_password" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

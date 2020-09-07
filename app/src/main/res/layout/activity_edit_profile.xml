@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/register"
     tools:context=".EditProfile">
 
     <ImageView
@@ -12,10 +13,10 @@
         android:layout_height="38dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/profilePhoneNo"
-        app:layout_constraintHorizontal_bias="0.166"
+        app:layout_constraintHorizontal_bias="0.578"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.043"
+        app:layout_constraintVertical_bias="0.098"
         app:srcCompat="@drawable/ic_local_phone_black_24dp"
         tools:ignore="VectorDrawableCompat" />
 
@@ -23,12 +24,13 @@
         android:id="@+id/imageView"
         android:layout_width="38dp"
         android:layout_height="40dp"
+        android:layout_marginBottom="252dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/profileFullName"
-        app:layout_constraintHorizontal_bias="0.187"
+        app:layout_constraintHorizontal_bias="0.55"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.526"
+        app:layout_constraintTop_toBottomOf="@+id/profileImageView"
+        app:layout_constraintVertical_bias="0.506"
         app:srcCompat="@drawable/ic_person_black_24dp" />
 
     <ImageView
@@ -47,13 +49,12 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="52dp"
         android:fontFamily="@font/alegreya_sans_sc_bold"
         android:text="Edit  Profile"
         android:textColor="#000000"
         android:textSize="36sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.516"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -66,18 +67,18 @@
         android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
         android:fontFamily="@font/alegreya_sans_sc_bold"
-        android:text="SAVE"
+        android:text="Save"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/profilePhoneNo"
-        app:layout_constraintVertical_bias="0.454" />
+        app:layout_constraintVertical_bias="0.144" />
 
     <EditText
         android:id="@+id/profileFullName"
-        android:layout_width="323dp"
+        android:layout_width="250dp"
         android:layout_height="42dp"
         android:ems="10"
         android:fontFamily="@font/alegreya_sans"
@@ -85,24 +86,26 @@
         android:text="Name"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.636"
+        app:layout_constraintHorizontal_bias="0.709"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/profileImageView"
-        app:layout_constraintVertical_bias="0.118" />
+        app:layout_constraintVertical_bias="0.119" />
 
     <EditText
         android:id="@+id/profilePhoneNo"
-        android:layout_width="322dp"
+        android:layout_width="250dp"
         android:layout_height="39dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
         android:ems="10"
         android:fontFamily="@font/alegreya_sans"
         android:inputType="textPersonName"
         android:text="Phone Number"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.64"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/profileFullName"
-        app:layout_constraintVertical_bias="0.048" />
+        app:layout_constraintVertical_bias="0.099" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

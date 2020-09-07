@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AdminProfile">
+    android:background="@drawable/register"
+    tools:context=".AdminProfile"
+    >
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -13,7 +15,7 @@
 
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/adminhome"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -24,17 +26,18 @@
             android:layout_marginBottom="108dp"
             android:fontFamily="@font/alegreya_sans_sc_bold"
             android:onClick="logout"
-            android:text="Logout"
+            android:text="Back  To  HomePage"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/changeProfile" />
+            app:layout_constraintTop_toBottomOf="@+id/changeProfile"
+            app:layout_constraintVertical_bias="1.0" />
 
         <ImageView
             android:id="@+id/profileImage"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
+            android:layout_width="116dp"
+            android:layout_height="115dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
@@ -55,7 +58,7 @@
             android:fontFamily="@font/alegreya_sans_medium"
             android:text="Full Name"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toEndOf="@+id/imageView2"
             app:layout_constraintTop_toTopOf="@+id/imageView2" />
 
@@ -171,7 +174,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/profileImage"
-            app:layout_constraintVertical_bias="0.120000005"
+            app:layout_constraintVertical_bias="0.034"
             app:srcCompat="@drawable/ic_person_black_24dp" />
 
         <ImageView
@@ -207,12 +210,12 @@
             android:layout_marginRight="8dp"
             android:fontFamily="@font/alegreya_sans_sc_bold"
             android:text="Change Profile"
-            app:layout_constraintBottom_toBottomOf="@+id/button"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/profilePhone"
-            app:layout_constraintVertical_bias="0.48000002" />
+            app:layout_constraintVertical_bias="0.123" />
 
         <TextView
             android:id="@+id/textView6"
