@@ -6,14 +6,16 @@
     android:layout_height="match_parent"
     android:background="@drawable/login"
     tools:context=".adminsetting"
+    android:orientation="vertical"
+    android:padding="30dp"
     >
 
     <TextView
-        android:id="@+id/textView11"
+        android:id="@+id/textView12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/alegreya_sans_sc_bold"
-        android:text="Admin  Setting"
+        android:text="Setting"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -21,4 +23,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.197" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>

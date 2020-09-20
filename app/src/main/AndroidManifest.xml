@@ -11,12 +11,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".adminsetting"></activity>
+        <activity android:name=".RemoveUser"></activity>
+        <activity android:name=".AddUser" />
+        <activity android:name=".ShowUser" />
+        <activity android:name=".adminsetting" />
         <activity android:name=".usermanagement" />
         <activity android:name=".AdminHome" />
         <activity android:name=".Timestamp" />
-        <activity android:name=".TemperatureCheck" />
         <activity android:name=".SoilHumidity" />
+        <activity android:name=".TemperatureCheck" />
         <activity android:name=".DataReport" />
         <activity android:name=".UserHome" />
         <activity android:name=".AdminProfile" />
