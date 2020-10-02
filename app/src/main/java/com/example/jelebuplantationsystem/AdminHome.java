@@ -17,6 +17,10 @@ public class AdminHome extends AppCompatActivity implements View.OnClickListener
         setContentView(R.layout.activity_admin_home);
 
 
+
+
+
+
         AdminProfile = (CardView) findViewById(R.id.adminprofile);
         Users = (CardView) findViewById(R.id.user);
         Settings = (CardView) findViewById(R.id.setting);
