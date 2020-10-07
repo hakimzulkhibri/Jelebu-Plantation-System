@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RemoveUserActivity">
+    <include
+        android:id="@+id/toolbar"
+        layout = "@layout/bar_layout"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@+id/toolbar">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_margin="20dp"
+            android:elevation="10dp"
+            android:outlineAmbientShadowColor="@android:color/darker_gray"
+            android:background="@drawable/white_border"
+            tools:targetApi="lollipop">
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/dltEmail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                app:met_floatingLabel="normal"
+                android:hint="Enter Your Email Here"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                app:met_baseColor="@color/colorPrimaryDark"
+                android:backgroundTint="@color/colorPrimaryDark"
+                android:textColorHint="@color/colorPrimaryDark"
+                android:textStyle="bold"
+                android:inputType="text"
+                app:met_textColor="@color/colorPrimaryDark"
+                android:fontFamily="@font/alegreya_sans_medium"
+                />
+        </FrameLayout>
+
+        <ProgressBar
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/progressBar"
+            android:layout_gravity="center"
+            android:indeterminateTint="@color/colorPrimaryDark"
+            tools:targetApi="lollipop"
+            android:visibility="gone"/>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:elevation="10dp"
+            android:outlineAmbientShadowColor="@android:color/darker_gray"
+            android:background="@drawable/green_border"
+            tools:targetApi="lollipop">
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Delete"
+                android:textColor="@color/colorPrimary"
+                android:id="@+id/deletedata"
+                android:textSize="20sp"
+                android:background="?attr/selectableItemBackground"/>
+        </FrameLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>
