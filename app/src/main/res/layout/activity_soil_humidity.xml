@@ -4,21 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/login"
     tools:context=".SoilHumidity"
-    android:background="@drawable/background">
+    >
 
     <TextView
-        android:layout_width="match_parent"
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
-        android:fontFamily="@font/alegreya_sans_medium"
-        android:gravity="center"
-        android:text="Soil   Humidity   Page"
-        android:textColor="#000000"
-        android:textSize="20sp"
+        android:fontFamily="@font/alegreya_sans_sc_bold"
+        android:text="Soil  Humidity"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.166"
-        tools:layout_editor_absoluteX="0dp" />
-
+        app:layout_constraintVertical_bias="0.147" />
 </androidx.constraintlayout.widget.ConstraintLayout>

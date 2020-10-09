@@ -6,42 +6,56 @@ import androidx.cardview.widget.CardView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 
-import com.google.firebase.auth.AdditionalUserInfo;
+public class AdminHome extends AppCompatActivity implements View.OnClickListener {
 
-public class AdminHome extends AppCompatActivity {
-
-    private Button displayuser;
-    private CardView addUsers, deleteUsers;
+    private CardView AdminProfile,  Users, Settings, AdminLogOut;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_home);
 
-        displayuser = findViewById(R.id.displayUser);
-        addUsers = (CardView) findViewById(R.id.adduser);
-        deleteUsers = (CardView) findViewById(R.id.removeuser);
 
-        addUsers.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(AdminHome.this, AddUserActivity.class));
-            }
-        });
-        deleteUsers.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(AdminHome.this, DeleteUserActivity.class));
-            }
-        });
 
-        displayuser.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(AdminHome.this, DisplayUserActivity.class));
-            }
-        });
+
+
+
+        AdminProfile = (CardView) findViewById(R.id.adminprofile);
+        Users = (CardView) findViewById(R.id.user);
+        Settings = (CardView) findViewById(R.id.setting);
+        AdminLogOut = (CardView) findViewById(R.id.Adminlogout);
+
+        AdminProfile.setOnClickListener(this);
+        Users.setOnClickListener(this);
+        Settings.setOnClickListener(this);
+        AdminLogOut.setOnClickListener(this);
+    }
+
+    @Override
+    public void onClick(View v) {
+        Intent i;
+
+        switch (v.getId()) {
+            case R.id.adminprofile:
+                i = new Intent(this, AdminProfile.class);
+                startActivity(i);
+
+                break;
+            case R.id.user:
+                i = new Intent(this, usermanagement.class);
+                startActivity(i);
+                break;
+            case R.id.setting:
+                i = new Intent(this, adminsetting.class);
+                startActivity(i);
+                break;
+            case R.id.Adminlogout:
+                i = new Intent(this, Login.class);
+                startActivity(i);
+                break;
+            default:
+                break;
+        }
     }
 }

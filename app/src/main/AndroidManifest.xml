@@ -7,29 +7,31 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="JPS"
+        android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".RemoveUserActivity"></activity>
-        <activity android:name=".DisplaySoilHumidityActivity" />
-        <activity android:name=".DisplayTemperatureActivity" />
-        <activity android:name=".DeleteUserActivity" />
-        <activity android:name=".AddUserActivity" />
-        <activity android:name=".DisplayUserActivity" />
-        <activity android:name=".TemperaturePage" />
+        <activity android:name=".adminsetting"></activity>
+        <activity android:name=".usermanagement" />
         <activity android:name=".AdminHome" />
-        <activity android:name=".ChangePasswordActivity" />
-        <activity android:name=".ForgetPasswordActivity" />
-        <activity android:name=".StartActivity" />
-        <activity android:name=".RegisterActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".Timestamp" />
+        <activity android:name=".TemperatureCheck" />
+        <activity android:name=".SoilHumidity" />
+        <activity android:name=".DataReport" />
+        <activity android:name=".UserHome" />
+        <activity android:name=".AdminProfile" />
+        <activity android:name=".EditProfile" />
+        <activity android:name=".Register">
+        </activity>
+        <activity android:name=".Login" />
+        <activity android:name=".Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".MainActivity" />
 
         <meta-data
             android:name="preloaded_fonts"
