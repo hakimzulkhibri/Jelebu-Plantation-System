@@ -8,18 +8,47 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:713090021626:android:aed9bf37e73d61e08a7143",
+        "mobilesdk_app_id": "1:713090021626:android:1d9f2f422749fe618a7143",
         "android_client_info": {
           "package_name": "com.example.jelebuplantationsystem"
         }
       },
       "oauth_client": [
         {
-          "client_id": "713090021626-3br0tcu9iu7du15bsjq8d3oscfkqilke.apps.googleusercontent.com",
+          "client_id": "713090021626-5424idtv6j1s0itgdc3mhnpt9f6301dl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCLwuL0G6FlO1qn7H1r29s6_O6NNYi2Tes"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "713090021626-5424idtv6j1s0itgdc3mhnpt9f6301dl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:713090021626:android:4ed5d06094f94e138a7143",
+        "android_client_info": {
+          "package_name": "com.example.testbutton"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "713090021626-b3q8jmq94qnduenuhjmoq1f8b8vcee3l.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.example.jelebuplantationsystem",
-            "certificate_hash": "1f17c5c71c71b504791fa732a29ca0bcfe7d46a3"
+            "package_name": "com.example.testbutton",
+            "certificate_hash": "10309c5ffb96dd1301aaf9014a567fa93d8cbd32"
           }
         },
         {

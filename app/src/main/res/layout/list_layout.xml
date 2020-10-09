@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/textViewName"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:fontFamily="@font/alegreya_sans_medium"/>
+
+    <TextView
+        android:id="@+id/TextViewEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:fontFamily="@font/alegreya_sans_medium"/>
+
+    <TextView
+        android:id="@+id/textViewMobile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:fontFamily="@font/alegreya_sans_medium"/>
+</LinearLayout>
